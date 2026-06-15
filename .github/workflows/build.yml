@@ -40,10 +40,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       
       - name: Build Docker image
-        run:
+        run: |
           docker build -t nikhilraj3001/exporto-profile:${{ github.run_number }} .
           docker tag nikhilraj3001/exporto-profile:${{ github.run_number }} nikhilraj3001/exporto-profile:latest
       - name: Push Docker image
-        run:
+        run: |
           docker push nikhilraj3001/exporto-profile:${{ github.run_number }}
           docker push nikhilraj3001/exporto-profile:latest
