@@ -41,9 +41,9 @@ jobs:
       
       - name: Build Docker image
         run:
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/exporto-profile:${{ github.run_number }} .
-          docker tag ${{ secrets.DOCKER_USERNAME }}/exporto-profile:${{ github.run_number }} ${{ secrets.DOCKER_USERNAME }}/exporto-profile:latest
+          docker build -t nikhilraj3001/exporto-profile:${{ github.run_number }} .
+          docker tag nikhilraj3001/exporto-profile:${{ github.run_number }} nikhilraj3001/exporto-profile:latest
       - name: Push Docker image
         run:
-          docker push ${{ secrets.DOCKER_USERNAME }}/exporto-profile:${{ github.run_number }}
-          docker push ${{ secrets.DOCKER_USERNAME }}/exporto-profile:latest
+          docker push nikhilraj3001/exporto-profile:${{ github.run_number }}
+          docker push nikhilraj3001/exporto-profile:latest
